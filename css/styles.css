@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: pedija-bold;
-    src: url(../fonts/Product-Sans-Bold.ttf);
+    src: url(../fonts/poppins.Bold.ttf);
 }
 @font-face {
     font-family: pedija-regular;
-    src: url(../fonts/Product-Sans-Regular.ttf);
+    src: url(../fonts/poppins.regular.ttf);
 }
 *{
     padding: 0;
@@ -62,11 +62,11 @@ body {
 /*------------------------------------------- */
 .floating-form {
     width:100%;
-    margin-top: 80px;
+    margin-top: 70px;
 }
 .floating-label { 
     position:relative; 
-    margin-bottom: 50px;
+    margin: 40px 0px;
 }
 .inputImg{
     position: absolute;
@@ -80,7 +80,7 @@ body {
     padding:4px 40px;
     display:block;
     width:100%;
-    height:30px;
+    height:40px;
     background-color: transparent;
     border:none;
     border-bottom:1px solid #757575;
