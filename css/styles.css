@@ -1,0 +1,193 @@
+/*----------------------------------------------
+/* BASIC SETUPS */
+/*----------------------------------------------*/
+
+@font-face {
+    font-family: pedija-bold;
+    src: url(../fonts/Product-Sans-Bold.ttf);
+}
+@font-face {
+    font-family: pedija-regular;
+    src: url(../fonts/Product-Sans-Regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    color: #141313;
+    font-family: pedija-regular;
+    text-rendering: optimizeLegibility;
+}
+
+/*----------------------------------------------
+/* REUSABLE COMPONENTS */
+/*----------------------------------------------*/
+
+/* MAIN CONTAINER */
+.mb-container {
+  max-width: 375pt;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin: 0px auto;
+  opacity: 1;
+  border: 1px solid #eee;
+  padding: 30px 15px;
+}
+
+/*----------------------------------------------
+/* Header */
+/*----------------------------------------------*/
+.icon-holder {
+    display: block;
+}
+
+.title-pedija {
+  width: 128px;
+  height: 53px;
+  margin-top: 10px;
+  margin-bottom: 30px ;   
+  font-family: pedija-bold;
+  font-weight:400;
+  font-size: 40px;
+  color: #541871;
+  opacity: 100%;
+}
+
+/*----------------------------------------------
+/* Login Form */
+/*------------------------------------------- */
+.floating-form {
+    width:100%;
+    margin-top: 80px;
+}
+.floating-label { 
+    position:relative; 
+    margin-bottom: 50px;
+}
+.inputImg{
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+    left: 0;
+    opacity: 0.6;
+}
+.floating-input , .floating-select {
+    font-size:15pt;
+    padding:4px 40px;
+    display:block;
+    width:100%;
+    height:30px;
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+    margin-bottom: 5px;
+    padding-left: 35px !important;
+    color: #242A4B;
+}
+.floating-input:focus , .floating-select:focus {
+    outline:none;
+    border-bottom:2px solid #9FAAB7; 
+}
+.highlight {
+    position:absolute;
+    height:50%; 
+    width:100%; 
+    top:15%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+.floating-input:focus ~ .highlight , .floating-select:focus ~ .highlight {
+-webkit-animation:inputHighlighter 0.3s ease;
+-moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+.floating-form  label {
+    color:#999; 
+    font-size:15pt;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:15px;
+    top:0px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+    padding-left: 20px !important;
+}
+.floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+    top:-18px;
+    font-size:14px;
+    color:#9FAAB7;
+}
+.floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
+    top:-18px;
+    font-size:14px;
+    color:#9FAAB7;
+}
+.floating-label a {
+    color: #541871;
+    font-size: 12pt;
+    
+}
+.floating-label a p {
+    padding-top: 5px;
+}
+.loginDisabledBtn{
+    width: 100%;
+    height: 50px;
+    font-size: 14pt;
+    background: #DCDEEA;
+    border: 1px solid #DCDEEA !important;
+    font-weight: 600;
+    font-family: pedija-bold;
+    color: #AAAFCB;
+}
+.loginDisabledBtn:focus,
+.loginDisabledBtn:active{
+     border: 1px solid #DCDEEA !important;
+}
+.loginDisabledBtn:disabled{
+    background: #9faab752;
+    border: 1px solid #DCDEEA !important;
+}
+
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+.text-Or {
+  margin-top: 19px; 
+  height: 18pt;
+  font-size: 15pt;
+  font-family: pedija-bold; 
+  color: #242a4b;
+  opacity: 1;
+}
+.iconBox {
+  width: 100%;
+  height: 51px;
+  margin-top: 9px;
+  justify-content: center;
+  display: flex;
+}
+.iconImage {
+  width: 50.76px;
+  height: 40.76px;
+  padding-right: 10px;
+  opacity: 100%;
+}
+
+.askAbtAccount {
+  height: 15px;
+  font-size: 12pt;
+  opacity: 1;
+  color: #858AA8;
+}
+.askAbtAccount > a {
+  color: #541871;
+  font-family: pedija-bold;
+}

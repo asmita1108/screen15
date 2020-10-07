@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pedija</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+      
+    <script>
+      $(document).ready(function(){
+       $('a#hidePassword').click(function() {
+        var img = $(this).find("img")[0];
+        var input =$("#pass_log_id");
+        if (input.attr("type") == "text") {
+            input.attr("type", "password");
+            img.src = img.src.replace("hide_password","padlock");
+         } else {
+            input.attr("type", "text");
+            img.src = img.src.replace("padlock","hide_password");
+         } 
+        return false;
+        });
+      });
+    </script>
+      
+  </head>
+  <body>
+      <div class="mb-container">
+          <header>
+             <div class="icon-holder">
+                 <a href="#"><img src="assets/close%20(22).svg" alt="close Icon" class="close-icon">
+                 </a>     
+             </div>
+             <div class="title-pedija">
+                 Pedija
+             </div>
+          </header>
+          <div class="floating-form">
+            <div class="floating-label">
+                <img src="assets/users.svg" class="inputImg" width="25px" height="15px" alt="users icon" />
+                <input class="floating-input" type="text" placeholder=" ">
+                <span class="highlight"></span>
+                <label>Email</label>
+            </div>
+            <div class="floating-label">
+                <img src="assets/closed.svg" class="inputImg" width="25px" height="15px" alt="lock icon" />
+                <input class="floating-input" id="pass_log_id" type="password" placeholder=" ">
+                <span class="highlight"></span>
+                <label>Password</label>
+                <a id="hidePassword" href="#">
+                   <img src="assets/padlock.svg" class="inputImg jsinputImg" id="passwordImg" style="right: 0; left: unset; top: 10px;" width="25px" height="18px" alt="" />
+                </a>    
+                <a href="#">
+                  <p class="baseClrTxt text-right">Forgot Password?</p>
+                </a>     
+            </div>
+
+            <button class="btn btn-default loginDisabledBtn" onclick="screen4()">Log In</button>   
+       </div> 
+       <div>
+        <p class="text-center text-Or">OR</p>
+        <div class="iconBox">
+          <a href="#">
+            <img
+              class="iconImage"
+              src="assets/e9c5b3331365dcadb50aeaa863227ade.png"
+            />
+          </a>
+          <a href="#">
+            <img class="iconImage" src="assets/NoPath - Copy (4).png" />
+          </a>
+          <a href="#">
+            <img class="iconImage" src="assets/NoPath - Copy (5).png" />
+          </a>
+          <a href="#">
+            <img class="iconImage" src="assets/mobileIcon(1).png" alt="mobileIcon" />
+          </a>
+        </div>
+        <p class="text-center askAbtAccount">
+          Don't have an account? <a href="#">Create One</a>
+        </p>
+      </div>
+      </div>
+      
+  </body>  
+</html>    
